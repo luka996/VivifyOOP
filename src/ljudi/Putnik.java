@@ -1,11 +1,14 @@
 package ljudi;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import let.Let;
+import prtljag.Prtljag;
 
 public class Putnik extends Covek{
 	boolean noFly;
+	ArrayList<Prtljag> prtljag = new ArrayList<Prtljag>();
 	
 	Let let;
 	
@@ -43,5 +46,22 @@ public class Putnik extends Covek{
 	
 	public boolean isNoFly() {
 		return noFly;
+	}
+
+	public ArrayList<Prtljag> getPrtljag() {
+		return prtljag;
+	}
+
+	public void setPrtljag(ArrayList<Prtljag> prtljag) {
+		this.prtljag = prtljag;
+	}
+	
+	public int getTezinaPrtljaga() 
+	{
+		int ukupnoPrtljag = 0;
+		for(Prtljag torba : prtljag) {
+			ukupnoPrtljag+= torba.getTezinaPrtljaga();
+		}
+		return ukupnoPrtljag;
 	}
 }

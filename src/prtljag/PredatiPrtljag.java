@@ -1,8 +1,6 @@
 package prtljag;
 
 import java.util.Random;
-
-import let.Let;
 import ljudi.Putnik;
 
 public class PredatiPrtljag extends Prtljag{

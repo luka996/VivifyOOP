@@ -1,6 +1,5 @@
 package prtljag;
 
-import let.Let;
 import ljudi.Putnik;
 
 public abstract class Prtljag {	
@@ -10,6 +9,8 @@ public abstract class Prtljag {
 	public Prtljag(Putnik vlasnikPrtljaga, int tezinaPrtljaga) {
 		this.vlasnikPrtljaga = vlasnikPrtljaga;
 		this.tezinaPrtljaga = tezinaPrtljaga;
+		// dodajemo prtljag na listu prtljaga putnika
+		vlasnikPrtljaga.getPrtljag().add(this);
 	}
 	
 	public abstract void nasumicnoIzgubiPrtljag();

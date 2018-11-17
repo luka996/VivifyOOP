@@ -57,7 +57,7 @@ public class LoggerLeta {
 		
 	}
 	
-	public void logujAkciju(String sadrzaj, boolean logujUFajl) {
+	public void loguj(String sadrzaj, boolean logujUFajl) {
 		if(logujUFajl) {
 			fajlLog(sadrzaj);
 			return;

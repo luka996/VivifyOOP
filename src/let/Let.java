@@ -13,8 +13,9 @@ public class Let {
 	int tezinaIzgubljenihPrtljaga= 0;
 	
 	public void ukrcajPutnika(Putnik putnik) {
-		if(!spisakPutnika.contains(putnik)) {
+		if(!spisakPutnika.contains(putnik) && putnik.isNoFly() == false) {
 			this.spisakPutnika.add(putnik);
+			putnik.setLet(this);
 		}
 	}
 
@@ -43,7 +44,7 @@ public class Let {
 	}
 	
 	public void dodajIzgubljeniPrtljag(Prtljag izgubljeniPrtljag) {
-		if(!listaIzgubljenihPrtljaga.contains(izgubljeniPrtljag))
+		if(!listaIzgubljenihPrtljaga.contains(izgubljeniPrtljag) && izgubljeniPrtljag.getVlasnikPrtljaga().isNoFly() == false)
 			listaIzgubljenihPrtljaga.add(izgubljeniPrtljag);
 		this.tezinaIzgubljenihPrtljaga+= izgubljeniPrtljag.getTezinaPrtljaga();
 	}

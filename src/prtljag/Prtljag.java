@@ -12,7 +12,9 @@ public abstract class Prtljag {
 		this.tezinaPrtljaga = tezinaPrtljaga;
 	}
 	
-	public abstract void IzgubiPrtljag(Let let);
+	public abstract void nasumicnoIzgubiPrtljag();
+	
+	public abstract void IzgubiPrtljag();
 
 	public Putnik getVlasnikPrtljaga() {
 		return vlasnikPrtljaga;

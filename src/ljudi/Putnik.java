@@ -2,9 +2,21 @@ package ljudi;
 
 import java.util.Random;
 
+import let.Let;
+
 public class Putnik extends Covek{
 	boolean noFly;
 	
+	Let let;
+	
+	public Let getLet() {
+		return let;
+	}
+
+	public void setLet(Let let) {
+		this.let = let;
+	}
+
 	public Putnik(String ime, String prezime) {
 		super(ime, prezime);
 		// kilazu postavljamo na nasumicno generisanu vrednost u intervalu 20 - 100

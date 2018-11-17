@@ -9,7 +9,7 @@ import java.util.Date;
 public class LoggerLeta {
 	private static LoggerLeta instancaLoggera;
 	
-	// akcije ce se logovati u fajlove organizovane po satima radi bolje preglednosti
+	// akcije ce se logovati u fajlove organizovane po datumima
 	private String fajlPutanja = String.format("log-leta-%s.txt", new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
 	
 	private BufferedWriter bw = null;
